@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - Minimarket</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-gray-50">
+  <div class="bg-gradient-to-r from-green-700 to-green-500 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Sobre Nosotros</h1>
+      <p class="text-lg text-green-100 max-w-2xl mx-auto">Conoce la historia detrás de Minimarket y nuestro compromiso con la calidad</p>
+    </div>
+  </div>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Nuestra Historia</h2>
+        <p class="text-gray-600 mb-4 leading-relaxed">Minimarket nació en 2010 con una misión clara: ofrecer productos frescos y de calidad a precios accesibles para toda la comunidad. Lo que comenzó como una pequeña tienda de barrio, hoy es una referencia en el sector.</p>
+        <p class="text-gray-600 mb-4 leading-relaxed">A lo largo de más de 15 años, hemos crecido manteniendo nuestros valores fundamentales: cercanía con el cliente, frescura en cada producto y un servicio excepcional.</p>
+        <p class="text-gray-600 leading-relaxed">Hoy contamos con presencia online para llevar nuestros productos directamente a tu hogar, manteniendo la misma calidad y atención que nos caracteriza.</p>
+      </div>
+      <div>
+        <img src="https://picsum.photos/seed/about-store/600/400" alt="Nuestra tienda" class="rounded-2xl shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">🎯</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Misión</h3>
+          <p class="text-gray-600">Ofrecer productos de calidad a precios justos, brindando una experiencia de compra excepcional a cada cliente.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">👁️</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Visión</h3>
+          <p class="text-gray-600">Ser la tienda de proximidad preferida, reconocida por nuestra calidad, servicio y compromiso con la comunidad.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">💚</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Valores</h3>
+          <p class="text-gray-600">Calidad, cercanía, honestidad, sostenibilidad y compromiso con nuestros clientes y comunidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-2">Nuestro Equipo</h2>
+      <p class="text-gray-600">Las personas que hacen posible Minimarket</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      ${TEAM.map(member => `
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden text-center group">
+          <img src="${member.image}" alt="${member.name}" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-800">${member.name}</h3>
+            <p class="text-green-600 font-medium text-sm mb-3">${member.role}</p>
+            <p class="text-gray-600 text-sm">${member.bio}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  </section>
+
+  <section class="bg-green-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-4xl font-bold text-green-700">15+</p>
+          <p class="text-gray-600 mt-1">Años de experiencia</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-green-700">5000+</p>
+          <p class="text-gray-600 mt-1">Clientes satisfechos</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-green-700">500+</p>
+          <p class="text-gray-600 mt-1">Productos disponibles</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-green-700">24h</p>
+          <p class="text-gray-600 mt-1">Entrega rápida</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/components.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', initPage);</script>
+</body>
+</html>
