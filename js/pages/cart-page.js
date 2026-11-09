@@ -20,7 +20,7 @@ function renderCart() {
   }
 
   const subtotal = CartManager.getTotal();
-  const shipping = subtotal >= 10 ? 0 : 3;
+  const shipping = subtotal >= 10000 ? 0 : 3000;
   const total = subtotal + shipping;
 
   container.innerHTML = `
@@ -58,7 +58,7 @@ function renderCart() {
               <span>Envío</span>
               <span>${shipping === 0 ? '<span class="text-green-600 font-medium">Gratis</span>' : formatCurrency(shipping)}</span>
             </div>
-            ${shipping > 0 ? `<p class="text-xs text-gray-500">Envío gratis en pedidos superiores a €10</p>` : ''}
+            ${shipping > 0 ? `<p class="text-xs text-gray-500">Envío gratis en pedidos superiores a $10.000</p>` : ''}
             <div class="border-t pt-3 flex justify-between text-lg font-bold text-gray-800">
               <span>Total</span>
               <span class="text-green-700">${formatCurrency(total)}</span>

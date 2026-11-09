@@ -1,10 +1,10 @@
 function formatCurrency(amount) {
-  return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(amount);
+  return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 }).format(amount);
 }
 
 function formatDate(dateStr) {
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(dateStr).toLocaleDateString('es-ES', options);
+  return new Date(dateStr).toLocaleDateString('es-CL', options);
 }
 
 function showToast(message, type = 'success') {

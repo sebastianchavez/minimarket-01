@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Ciudad</label>
-              <input type="text" name="city" required value="Madrid" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none">
+              <input type="text" name="city" required value="Santiago" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none">
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Código Postal</label>
-              <input type="text" name="zip" required placeholder="28001" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none">
+              <input type="text" name="zip" required placeholder="7500000" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none">
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="font-medium text-gray-800">Estándar (2-3 días)</p>
                 <p class="text-sm text-gray-500">Entrega en 2-3 días hábiles</p>
               </div>
-              <span class="font-semibold text-gray-800">€3.00</span>
+              <span class="font-semibold text-gray-800">$3.000</span>
             </label>
             <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-green-500 transition has-[:checked]:border-green-500 has-[:checked]:bg-green-50">
               <input type="radio" name="shipping" value="express" class="text-green-600 focus:ring-green-500">
@@ -57,13 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="font-medium text-gray-800">Express (24h)</p>
                 <p class="text-sm text-gray-500">Entrega al día siguiente</p>
               </div>
-              <span class="font-semibold text-gray-800">€5.00</span>
+              <span class="font-semibold text-gray-800">$5.000</span>
             </label>
             <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-green-500 transition has-[:checked]:border-green-500 has-[:checked]:bg-green-50">
-              <input type="radio" name="shipping" value="free" class="text-green-600 focus:ring-green-500" ${subtotal >= 10 ? '' : 'disabled'}>
+              <input type="radio" name="shipping" value="free" class="text-green-600 focus:ring-green-500" ${subtotal >= 10000 ? '' : 'disabled'}>
               <div class="ml-3 flex-1">
-                <p class="font-medium text-gray-800">Gratis (+€10)</p>
-                <p class="text-sm text-gray-500">${subtotal >= 10 ? '¡Pedido eligible!' : 'Pedido mínimo €10'}</p>
+                <p class="font-medium text-gray-800">Gratis (+$10.000)</p>
+                <p class="text-sm text-gray-500">${subtotal >= 10000 ? '¡Pedido eligible!' : 'Pedido mínimo $10.000'}</p>
               </div>
               <span class="font-semibold text-green-600">Gratis</span>
             </label>
@@ -128,11 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="flex justify-between text-gray-600">
               <span>Envío</span>
-              <span id="shipping-cost">€3.00</span>
+              <span id="shipping-cost">$3.000</span>
             </div>
             <div class="border-t pt-2 flex justify-between text-lg font-bold text-gray-800">
               <span>Total</span>
-              <span id="total-cost" class="text-green-700">${formatCurrency(subtotal + 3)}</span>
+              <span id="total-cost" class="text-green-700">${formatCurrency(subtotal + 3000)}</span>
             </div>
           </div>
           <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition mt-6">Confirmar Pedido</button>
@@ -155,8 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const shippingMethod = formData.get('shipping');
-    const shippingCosts = { standard: 3, express: 5, free: 0 };
-    const shippingNames = { standard: 'Estándar (2-3 días)', express: 'Express (24h)', free: 'Gratis (+10€)' };
+    const shippingCosts = { standard: 3000, express: 5000, free: 0 };
+    const shippingNames = { standard: 'Estándar (2-3 días)', express: 'Express (24h)', free: 'Gratis (+$10.000)' };
     const paymentNames = { card: 'Tarjeta de crédito', paypal: 'PayPal', transfer: 'Transferencia bancaria' };
 
     const order = {
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateTotals() {
   const subtotal = CartManager.getTotal();
   const shipping = document.querySelector('input[name="shipping"]:checked').value;
-  const costs = { standard: 3, express: 5, free: 0 };
+  const costs = { standard: 3000, express: 5000, free: 0 };
   const cost = costs[shipping];
 
   document.getElementById('shipping-cost').textContent = cost === 0 ? 'Gratis' : formatCurrency(cost);

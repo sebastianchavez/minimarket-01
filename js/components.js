@@ -102,9 +102,9 @@ function renderFooter() {
           <div>
             <h3 class="font-semibold mb-4">Contacto</h3>
             <ul class="space-y-2 text-sm text-gray-400">
-              <li>📍 Calle Mayor 123, Madrid</li>
-              <li>📞 +34 912 345 678</li>
-              <li>✉️ info@minimarket.com</li>
+              <li>📍 Av. Providencia 123, Santiago</li>
+              <li>📞 +56 2 2345 6789</li>
+              <li>✉️ info@minimarket.cl</li>
             </ul>
           </div>
         </div>

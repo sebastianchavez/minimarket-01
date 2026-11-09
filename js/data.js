@@ -8,30 +8,30 @@ const CATEGORIES = [
 ];
 
 const PRODUCTS = [
-  { id: 1, name: 'Manzanas Rojas', price: 2.50, category: 1, stock: 50, rating: 4.5, image: 'https://picsum.photos/seed/prod-apple/400/400', description: 'Manzanas rojas frescas, crujientes y dulces. Perfectas para comer solas o en ensaladas. Origen: Valle del Jerte.', featured: true },
-  { id: 2, name: 'Plátanos', price: 1.80, category: 1, stock: 80, rating: 4.7, image: 'https://picsum.photos/seed/prod-banana/400/400', description: 'Plátanos de Canarias maduros y dulces. Ricos en potasio y energía natural.', featured: true },
-  { id: 3, name: 'Tomates', price: 3.20, category: 1, stock: 40, rating: 4.3, image: 'https://picsum.photos/seed/prod-tomato/400/400', description: 'Tomates maduros de huerta, ideales para ensaladas y salsas. Sin pesticidas.', featured: false },
-  { id: 4, name: 'Lechuga Romana', price: 1.50, category: 1, stock: 30, rating: 4.0, image: 'https://picsum.photos/seed/prod-lettuce/400/400', description: 'Lechuga romana fresca y crujiente. Perfecta para ensaladas y wraps.', featured: false },
-  { id: 5, name: 'Leche Entera 1L', price: 1.20, category: 2, stock: 100, rating: 4.6, image: 'https://picsum.photos/seed/prod-milk/400/400', description: 'Leche entera pasteurizada de alta calidad. Rica en calcio y vitaminas.', featured: true },
-  { id: 6, name: 'Yogur Natural', price: 0.80, category: 2, stock: 60, rating: 4.4, image: 'https://picsum.photos/seed/prod-yogurt/400/400', description: 'Yogur natural sin azúcar añadido. Cremoso y delicioso.', featured: true },
-  { id: 7, name: 'Queso Manchego', price: 8.50, category: 2, stock: 20, rating: 4.8, image: 'https://picsum.photos/seed/prod-cheese/400/400', description: 'Queso manchego curado, sabor intenso y textura firme. Denominación de origen.', featured: false },
-  { id: 8, name: 'Mantequilla', price: 2.30, category: 2, stock: 45, rating: 4.2, image: 'https://picsum.photos/seed/prod-butter/400/400', description: 'Mantequilla cremosa de primera calidad. Ideal para cocinar y untar.', featured: false },
-  { id: 9, name: 'Agua Mineral 1.5L', price: 0.90, category: 3, stock: 200, rating: 4.5, image: 'https://picsum.photos/seed/prod-water/400/400', description: 'Agua mineral natural de manantial. Pura y refrescante.', featured: true },
-  { id: 10, name: 'Zumo de Naranja 1L', price: 2.80, category: 3, stock: 50, rating: 4.6, image: 'https://picsum.photos/seed/prod-juice/400/400', description: 'Zumo de naranja 100% natural, sin azúcares añadidos ni conservantes.', featured: true },
-  { id: 11, name: 'Coca-Cola 2L', price: 2.10, category: 3, stock: 80, rating: 4.3, image: 'https://picsum.photos/seed/prod-cola/400/400', description: 'Refresco de cola clásico. Sabor inconfundible.', featured: false },
-  { id: 12, name: 'Cerveza Artesanal', price: 3.50, category: 3, stock: 35, rating: 4.7, image: 'https://picsum.photos/seed/prod-beer/400/400', description: 'Cerveza artesanal elaborada con ingredientes naturales. Sabor único.', featured: false },
-  { id: 13, name: 'Patatas Fritas', price: 2.20, category: 4, stock: 70, rating: 4.4, image: 'https://picsum.photos/seed/prod-chips/400/400', description: 'Patatas fritas crujientes con sal marina. Snack perfecto para cualquier momento.', featured: true },
-  { id: 14, name: 'Galletas de Chocolate', price: 1.90, category: 4, stock: 55, rating: 4.5, image: 'https://picsum.photos/seed/prod-cookies/400/400', description: 'Galletas con chips de chocolate. Suaves por dentro y crujientes por fuera.', featured: true },
-  { id: 15, name: 'Chocolate con Leche', price: 2.50, category: 4, stock: 40, rating: 4.8, image: 'https://picsum.photos/seed/prod-chocolate/400/400', description: 'Chocolate con leche cremoso. Elaborado con cacao seleccionado.', featured: false },
-  { id: 16, name: 'Frutos Secos Mix', price: 4.50, category: 4, stock: 30, rating: 4.6, image: 'https://picsum.photos/seed/prod-nuts/400/400', description: 'Mezcla de almendras, nueces y anacardos. Snack saludable y energético.', featured: false },
-  { id: 17, name: 'Detergente Líquido', price: 6.80, category: 5, stock: 25, rating: 4.3, image: 'https://picsum.photos/seed/prod-detergent/400/400', description: 'Detergente líquido concentrado para ropa. Eficaz incluso en agua fría.', featured: false },
-  { id: 18, name: 'Lavavajillas', price: 3.20, category: 5, stock: 40, rating: 4.1, image: 'https://picsum.photos/seed/prod-dishsoap/400/400', description: 'Gel lavavajillas a mano con aroma a limón. Suave con las manos.', featured: false },
-  { id: 19, name: 'Papel Higiénico x12', price: 5.50, category: 5, stock: 60, rating: 4.4, image: 'https://picsum.photos/seed/prod-toilet/400/400', description: 'Papel higiénico suave y resistente. Pack de 12 rollos.', featured: false },
-  { id: 20, name: 'Limpiador Multiusos', price: 2.80, category: 5, stock: 35, rating: 4.2, image: 'https://picsum.photos/seed/prod-cleaner/400/400', description: 'Limpiador multiusos con desinfectante. Para todas las superficies.', featured: false },
-  { id: 21, name: 'Pan de Molde', price: 1.80, category: 6, stock: 30, rating: 4.3, image: 'https://picsum.photos/seed/prod-bread/400/400', description: 'Pan de molde integral, suave y esponjoso. Recién horneado.', featured: true },
-  { id: 22, name: 'Croissants x6', price: 3.50, category: 6, stock: 20, rating: 4.7, image: 'https://picsum.photos/seed/prod-croissant/400/400', description: 'Croissants de mantequilla, hojaldrados y dorados. Pack de 6 unidades.', featured: true },
-  { id: 23, name: 'Magdalenas x12', price: 2.90, category: 6, stock: 25, rating: 4.5, image: 'https://picsum.photos/seed/prod-muffins/400/400', description: 'Magdalenas caseras, esponjosas y con sabor a limón. Pack de 12.', featured: false },
-  { id: 24, name: 'Baguette', price: 1.20, category: 6, stock: 15, rating: 4.4, image: 'https://picsum.photos/seed/prod-baguette/400/400', description: 'Baguette francesa crujiente por fuera y tierna por dentro.', featured: false }
+  { id: 1, name: 'Manzanas Rojas', price: 2500, category: 1, stock: 50, rating: 4.5, image: 'https://picsum.photos/seed/prod-apple/400/400', description: 'Manzanas rojas frescas, crujientes y dulces. Perfectas para comer solas o en ensaladas. Origen: Valle del Jerte.', featured: true },
+  { id: 2, name: 'Plátanos', price: 1800, category: 1, stock: 80, rating: 4.7, image: 'https://picsum.photos/seed/prod-banana/400/400', description: 'Plátanos de Canarias maduros y dulces. Ricos en potasio y energía natural.', featured: true },
+  { id: 3, name: 'Tomates', price: 3200, category: 1, stock: 40, rating: 4.3, image: 'https://picsum.photos/seed/prod-tomato/400/400', description: 'Tomates maduros de huerta, ideales para ensaladas y salsas. Sin pesticidas.', featured: false },
+  { id: 4, name: 'Lechuga Romana', price: 1500, category: 1, stock: 30, rating: 4.0, image: 'https://picsum.photos/seed/prod-lettuce/400/400', description: 'Lechuga romana fresca y crujiente. Perfecta para ensaladas y wraps.', featured: false },
+  { id: 5, name: 'Leche Entera 1L', price: 1200, category: 2, stock: 100, rating: 4.6, image: 'https://picsum.photos/seed/prod-milk/400/400', description: 'Leche entera pasteurizada de alta calidad. Rica en calcio y vitaminas.', featured: true },
+  { id: 6, name: 'Yogur Natural', price: 800, category: 2, stock: 60, rating: 4.4, image: 'https://picsum.photos/seed/prod-yogurt/400/400', description: 'Yogur natural sin azúcar añadido. Cremoso y delicioso.', featured: true },
+  { id: 7, name: 'Queso Manchego', price: 8500, category: 2, stock: 20, rating: 4.8, image: 'https://picsum.photos/seed/prod-cheese/400/400', description: 'Queso manchego curado, sabor intenso y textura firme. Denominación de origen.', featured: false },
+  { id: 8, name: 'Mantequilla', price: 2300, category: 2, stock: 45, rating: 4.2, image: 'https://picsum.photos/seed/prod-butter/400/400', description: 'Mantequilla cremosa de primera calidad. Ideal para cocinar y untar.', featured: false },
+  { id: 9, name: 'Agua Mineral 1.5L', price: 900, category: 3, stock: 200, rating: 4.5, image: 'https://picsum.photos/seed/prod-water/400/400', description: 'Agua mineral natural de manantial. Pura y refrescante.', featured: true },
+  { id: 10, name: 'Zumo de Naranja 1L', price: 2800, category: 3, stock: 50, rating: 4.6, image: 'https://picsum.photos/seed/prod-juice/400/400', description: 'Zumo de naranja 100% natural, sin azúcares añadidos ni conservantes.', featured: true },
+  { id: 11, name: 'Coca-Cola 2L', price: 2100, category: 3, stock: 80, rating: 4.3, image: 'https://picsum.photos/seed/prod-cola/400/400', description: 'Refresco de cola clásico. Sabor inconfundible.', featured: false },
+  { id: 12, name: 'Cerveza Artesanal', price: 3500, category: 3, stock: 35, rating: 4.7, image: 'https://picsum.photos/seed/prod-beer/400/400', description: 'Cerveza artesanal elaborada con ingredientes naturales. Sabor único.', featured: false },
+  { id: 13, name: 'Patatas Fritas', price: 2200, category: 4, stock: 70, rating: 4.4, image: 'https://picsum.photos/seed/prod-chips/400/400', description: 'Patatas fritas crujientes con sal marina. Snack perfecto para cualquier momento.', featured: true },
+  { id: 14, name: 'Galletas de Chocolate', price: 1900, category: 4, stock: 55, rating: 4.5, image: 'https://picsum.photos/seed/prod-cookies/400/400', description: 'Galletas con chips de chocolate. Suaves por dentro y crujientes por fuera.', featured: true },
+  { id: 15, name: 'Chocolate con Leche', price: 2500, category: 4, stock: 40, rating: 4.8, image: 'https://picsum.photos/seed/prod-chocolate/400/400', description: 'Chocolate con leche cremoso. Elaborado con cacao seleccionado.', featured: false },
+  { id: 16, name: 'Frutos Secos Mix', price: 4500, category: 4, stock: 30, rating: 4.6, image: 'https://picsum.photos/seed/prod-nuts/400/400', description: 'Mezcla de almendras, nueces y anacardos. Snack saludable y energético.', featured: false },
+  { id: 17, name: 'Detergente Líquido', price: 6800, category: 5, stock: 25, rating: 4.3, image: 'https://picsum.photos/seed/prod-detergent/400/400', description: 'Detergente líquido concentrado para ropa. Eficaz incluso en agua fría.', featured: false },
+  { id: 18, name: 'Lavavajillas', price: 3200, category: 5, stock: 40, rating: 4.1, image: 'https://picsum.photos/seed/prod-dishsoap/400/400', description: 'Gel lavavajillas a mano con aroma a limón. Suave con las manos.', featured: false },
+  { id: 19, name: 'Papel Higiénico x12', price: 5500, category: 5, stock: 60, rating: 4.4, image: 'https://picsum.photos/seed/prod-toilet/400/400', description: 'Papel higiénico suave y resistente. Pack de 12 rollos.', featured: false },
+  { id: 20, name: 'Limpiador Multiusos', price: 2800, category: 5, stock: 35, rating: 4.2, image: 'https://picsum.photos/seed/prod-cleaner/400/400', description: 'Limpiador multiusos con desinfectante. Para todas las superficies.', featured: false },
+  { id: 21, name: 'Pan de Molde', price: 1800, category: 6, stock: 30, rating: 4.3, image: 'https://picsum.photos/seed/prod-bread/400/400', description: 'Pan de molde integral, suave y esponjoso. Recién horneado.', featured: true },
+  { id: 22, name: 'Croissants x6', price: 3500, category: 6, stock: 20, rating: 4.7, image: 'https://picsum.photos/seed/prod-croissant/400/400', description: 'Croissants de mantequilla, hojaldrados y dorados. Pack de 6 unidades.', featured: true },
+  { id: 23, name: 'Magdalenas x12', price: 2900, category: 6, stock: 25, rating: 4.5, image: 'https://picsum.photos/seed/prod-muffins/400/400', description: 'Magdalenas caseras, esponjosas y con sabor a limón. Pack de 12.', featured: false },
+  { id: 24, name: 'Baguette', price: 1200, category: 6, stock: 15, rating: 4.4, image: 'https://picsum.photos/seed/prod-baguette/400/400', description: 'Baguette francesa crujiente por fuera y tierna por dentro.', featured: false }
 ];
 
 const REVIEWS = [
@@ -65,14 +65,14 @@ const MOCK_ORDERS = [
     date: '2026-09-28',
     status: 'Entregado',
     items: [
-      { productId: 1, name: 'Manzanas Rojas', price: 2.50, quantity: 3, image: 'https://picsum.photos/seed/prod-apple/400/400' },
-      { productId: 5, name: 'Leche Entera 1L', price: 1.20, quantity: 2, image: 'https://picsum.photos/seed/prod-milk/400/400' },
-      { productId: 21, name: 'Pan de Molde', price: 1.80, quantity: 1, image: 'https://picsum.photos/seed/prod-bread/400/400' }
+      { productId: 1, name: 'Manzanas Rojas', price: 2500, quantity: 3, image: 'https://picsum.photos/seed/prod-apple/400/400' },
+      { productId: 5, name: 'Leche Entera 1L', price: 1200, quantity: 2, image: 'https://picsum.photos/seed/prod-milk/400/400' },
+      { productId: 21, name: 'Pan de Molde', price: 1800, quantity: 1, image: 'https://picsum.photos/seed/prod-bread/400/400' }
     ],
-    subtotal: 11.70,
-    shipping: 3.00,
-    total: 14.70,
-    address: 'Calle Mayor 123, Madrid',
+    subtotal: 11700,
+    shipping: 3000,
+    total: 14700,
+    address: 'Av. Providencia 123, Santiago',
     shippingMethod: 'Estándar (2-3 días)',
     paymentMethod: 'Tarjeta de crédito'
   },
@@ -81,13 +81,13 @@ const MOCK_ORDERS = [
     date: '2026-09-30',
     status: 'En camino',
     items: [
-      { productId: 13, name: 'Patatas Fritas', price: 2.20, quantity: 2, image: 'https://picsum.photos/seed/prod-chips/400/400' },
-      { productId: 10, name: 'Zumo de Naranja 1L', price: 2.80, quantity: 1, image: 'https://picsum.photos/seed/prod-juice/400/400' }
+      { productId: 13, name: 'Patatas Fritas', price: 2200, quantity: 2, image: 'https://picsum.photos/seed/prod-chips/400/400' },
+      { productId: 10, name: 'Zumo de Naranja 1L', price: 2800, quantity: 1, image: 'https://picsum.photos/seed/prod-juice/400/400' }
     ],
-    subtotal: 7.20,
-    shipping: 3.00,
-    total: 10.20,
-    address: 'Calle Mayor 123, Madrid',
+    subtotal: 7200,
+    shipping: 3000,
+    total: 10200,
+    address: 'Av. Providencia 123, Santiago',
     shippingMethod: 'Express (24h)',
     paymentMethod: 'PayPal'
   },
@@ -96,15 +96,15 @@ const MOCK_ORDERS = [
     date: '2026-10-01',
     status: 'Procesando',
     items: [
-      { productId: 22, name: 'Croissants x6', price: 3.50, quantity: 1, image: 'https://picsum.photos/seed/prod-croissant/400/400' },
-      { productId: 6, name: 'Yogur Natural', price: 0.80, quantity: 4, image: 'https://picsum.photos/seed/prod-yogurt/400/400' },
-      { productId: 15, name: 'Chocolate con Leche', price: 2.50, quantity: 2, image: 'https://picsum.photos/seed/prod-chocolate/400/400' }
+      { productId: 22, name: 'Croissants x6', price: 3500, quantity: 1, image: 'https://picsum.photos/seed/prod-croissant/400/400' },
+      { productId: 6, name: 'Yogur Natural', price: 800, quantity: 4, image: 'https://picsum.photos/seed/prod-yogurt/400/400' },
+      { productId: 15, name: 'Chocolate con Leche', price: 2500, quantity: 2, image: 'https://picsum.photos/seed/prod-chocolate/400/400' }
     ],
-    subtotal: 11.70,
+    subtotal: 11700,
     shipping: 0,
-    total: 11.70,
-    address: 'Avenida de la Constitución 45, Madrid',
-    shippingMethod: 'Gratis (+10€)',
+    total: 11700,
+    address: 'Avenida de la Constitución 45, Santiago',
+    shippingMethod: 'Gratis (+$10.000)',
     paymentMethod: 'Tarjeta de crédito'
   },
   {
@@ -112,12 +112,12 @@ const MOCK_ORDERS = [
     date: '2026-09-15',
     status: 'Cancelado',
     items: [
-      { productId: 17, name: 'Detergente Líquido', price: 6.80, quantity: 1, image: 'https://picsum.photos/seed/prod-detergent/400/400' }
+      { productId: 17, name: 'Detergente Líquido', price: 6800, quantity: 1, image: 'https://picsum.photos/seed/prod-detergent/400/400' }
     ],
-    subtotal: 6.80,
-    shipping: 3.00,
-    total: 9.80,
-    address: 'Calle Mayor 123, Madrid',
+    subtotal: 6800,
+    shipping: 3000,
+    total: 9800,
+    address: 'Av. Providencia 123, Santiago',
     shippingMethod: 'Estándar (2-3 días)',
     paymentMethod: 'Transferencia bancaria'
   }
@@ -127,7 +127,7 @@ const MOCK_USER = {
   id: 1,
   name: 'Juan Pérez',
   email: 'juan@email.com',
-  phone: '+34 612 345 678',
-  address: 'Calle Mayor 123, Madrid',
+  phone: '+56 9 8765 4321',
+  address: 'Av. Providencia 123, Santiago',
   memberSince: '2025-03-15'
 };

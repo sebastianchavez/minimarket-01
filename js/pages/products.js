@@ -74,9 +74,9 @@ function getFilteredProducts() {
   }
 
   if (currentFilters.price !== 'all') {
-    if (currentFilters.price === '0-2') filtered = filtered.filter(p => p.price <= 2);
-    else if (currentFilters.price === '2-5') filtered = filtered.filter(p => p.price > 2 && p.price <= 5);
-    else if (currentFilters.price === '5+') filtered = filtered.filter(p => p.price > 5);
+    if (currentFilters.price === '0-2') filtered = filtered.filter(p => p.price <= 2000);
+    else if (currentFilters.price === '2-5') filtered = filtered.filter(p => p.price > 2000 && p.price <= 5000);
+    else if (currentFilters.price === '5+') filtered = filtered.filter(p => p.price > 5000);
   }
 
   switch (currentFilters.sort) {

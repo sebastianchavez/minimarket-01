@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="border-t pt-6 space-y-3">
           <div class="flex items-center text-sm text-gray-600">
-            <span class="mr-2">🚚</span> Envío gratis en pedidos superiores a €10
+            <span class="mr-2">🚚</span> Envío gratis en pedidos superiores a $10.000
           </div>
           <div class="flex items-center text-sm text-gray-600">
             <span class="mr-2">↩️</span> Devolución gratuita en 30 días
